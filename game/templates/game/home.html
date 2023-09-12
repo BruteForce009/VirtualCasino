@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Virtual Casino</title>
+        <link rel="icon" type="image/png" href="{% static 'game/images/dice-2.png' %}">
+        <link rel="stylesheet" href="{% static 'game/css/home.css' %}">
+        <script src="{% static 'game/js/home.js'%}"  type="module"></script>
+    </head>
+    <body id="home-body">
+        <div class="heading-div">
+            <h1 id="home-heading">Welcome to Virtual Casino</h1>
+        </div>
+        <div class="form-container">
+            <form id="home-form" action="{%url 'game-rules'%}" method="post">
+                {% csrf_token %}
+<!--                <label for="name">Name:</label>-->
+<!--                <input type="text" id="name" name="name" required>-->
+                {{form.as_p}}
+                <label for="gameType">Select Game:</label>
+                <select id="gameType" name="gameType" required>
+                    <option value="BlackJack">BlackJack</option>
+                </select>
+                <br/><br/>
+                <input type="submit" value="Play" id="play-btn">
+            </form>
+        </div>
+    </body>
+</html>

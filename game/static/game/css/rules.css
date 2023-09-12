@@ -1,0 +1,60 @@
+body, html {
+    height: 100%; /* div takes 100% viewport */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#rules-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color:rgba(70, 180, 0, 1);*/
+    background-image: url("../images/casino-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: -1;
+}
+
+#rules-charter {
+    font-family: Georgia, serif;
+    text-align: center;
+    width: 920px;
+    height: 540px;
+    background-image: url("../images/papyrus-1.png");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+}
+
+#rules-blackjack {
+    padding: 30px;
+}
+
+.progress {
+  position: relative;
+  top: 100px;
+  width: 500px;
+  height: 18px;
+  background: #9cbab4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress__fill {
+  width: 0%;
+  height: 100%;
+  background: #009579;
+  transition: all 0.001s;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font: italic 12px "Quicksand", sans-serif;
+  color: #ffffff;
+}

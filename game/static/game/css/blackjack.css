@@ -1,0 +1,136 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #AAAAAA;
+}
+
+#main-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/poker-table-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#round-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 18px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#round-value {
+    font-family: "Comic Sans MS", monospace;
+    font-size: 28px;
+    color: #3a3839;
+    text-shadow: 0 0 2.5px #d7fc79, 0 0 5px #d7fc79, 0 0 7.5px #d7fc79, 0 0 10px #d7fc79; /* Text shadow */
+}
+
+#chip-div {
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
+}
+
+#chip-img{
+    position: absolute;
+    top: 2px;
+    right: 90px;
+    padding: 5px;
+    height: 80px;
+    width: 60px;
+}
+
+#chip-value{
+    position: absolute;
+    top: 15px;
+    right: 21px;
+    padding: 5px;
+    font-family: "Comic Sans MS", monospace;
+    font-size: 30px;
+    color: #3a3839;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffd700;
+}
+
+.top-text {
+    font-family: luminari, fantasy;
+    color: #474747;
+    margin: 10px 0px 0px 0px;
+}
+
+#dealer-cards img {
+    height: 105px;
+    width: 75px;
+    margin: 5px 5px 15px 5px; /*top right bottom left*/
+}
+
+#your-cards img {
+    height: 105px;
+    width: 75px;
+    margin: 5px 5px 15px 5px;
+}
+
+#btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+#btn-div button {
+    margin: 0 5px;
+}
+
+#hit {
+    font-family: monospace;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    margin: 1px 5px 1px 5px;
+    border-radius: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+    background-color: rgba(50, 100, 250, 1);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0.1s;
+}
+
+#hit:hover {
+    background-color: rgba(50, 100, 250, 0.5);
+  }
+
+#stay {
+    font-family: monospace;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    margin: 1px 5px 1px 5px;
+    border-radius: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgba(242,22,22, 1);
+    border: none;
+    transition: all 0.3s ease 0.1s;
+}
+
+#stay:hover {
+    background-color: rgba(242,22,22, 0.5);
+  }
+
+#results {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 32px;
+    color: #fc0290;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BlackJack</title>
+        <link rel="icon" type="image/png" href="{% static 'game/images/dice-2.png' %}">
+        <link rel="stylesheet" href="{% static 'game/css/blackjack.css' %}">
+    </head>
+        <body>
+        <div id="main-div">
+            <div id="round-div">
+                <span id="round-value"></span>
+            </div>
+            <div id="chip-div">
+                <img src="{% static 'game/images/chips-2.png'%}" id="chip-img"/>
+                <span id="chip-value"></span>
+            </div>
+
+            <h2 class="top-text">Dealer: <span id="dealer-sum"></span></h2>
+            <div id="dealer-cards">
+                <img id="hidden" src="{% static 'game/cards/BACK.png'%}">
+            </div>
+
+            <h2 class="top-text">You: <span id="your-sum"></span></h2>
+            <div id="your-cards"></div>
+
+            <br>
+
+            <div id="btn-div">
+            <button id="hit">Hit</button>
+            <button id="stay">Stay</button>
+            </div>
+            <p id="results"></p>
+        </div>
+    <script src="{% static 'game/js/blackjack.js'%}"></script>
+    </body>
+</html>

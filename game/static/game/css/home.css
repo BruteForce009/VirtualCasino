@@ -1,0 +1,47 @@
+body, html {
+    height: 100%; /* div takes 100% viewport */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#home-body {
+    display: flex;
+    justify-content: center; /* Center align content horizontally */
+    align-items: center; /* Center align content vertically */
+    background-image: url("../images/casino-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* covers entire element */
+    background-position: center;
+    position: fixed; /* div fixed wrt to viewport */
+    z-index: -1; /* sets the div behind the content (negative value) */
+}
+
+.heading-div {
+    position: fixed;
+    top:0%;
+    text-align: center; /* Center the text within the heading div */
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+}
+
+.form-container {
+    height: auto;
+    width: 216px;
+    text-align: center; /* Center align contents inside the form container */
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+#home-form {
+    width: 216px;
+    padding: 20px;
+    border: 3px solid #767676;
+    background-color: #fff;
+    text-align: left; /* Reset the text-align property for the form contents */
+}
+
+#home-form input[type="submit"] {
+    display: block; /* Make the submit button a block-level element */
+    margin: 0 auto; /* Center the submit button horizontally */
+}

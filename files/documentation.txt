@@ -1,0 +1,33 @@
+# in powershell (admin)
+- Get-ExecutionPolicy
+- Set-ExecutionPolicy -Scope CurrentUser Restricted
+- Set-ExecutionPolicy -Scope CurrentUser RemoteSigned (allows scripts)
+
+# in local terminal
+- venv\scripts\activate (activate virtual env)
+- pip install django
+- django-admin (lists available cmds)
+- django-admin startproject VirtualCasino
+- python manage.py runserver
+- python manage.py startapp game (creates new app within project)
+
+# database (inbuilt ORM, any db, same queries)
+- python manage.py makemigrations (stage)
+- python manage.py migrate (commit)
+- python manage.py createsuperuser (katz1234)
+- python manage.py sqlmigrate game <ID> (raw sql)
+
+# django python shell
+- python manage.py shell
+>>> from game.models import User OR from django.contrib.auth.models import User
+>>> User.objects.all()/.first()
+>>> user01 = User.objects.filter(username='').first()
+>>> user01.pk
+>>> user01.id
+>>> user02 = User.objects.get(id='')
+>>> exit()
+
+# scripts
+<!--
+    <td><a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger"><button type="button" id="delete-btn">Delete</button></a></td>
+-->

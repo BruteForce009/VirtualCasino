@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BlackJack</title>
+        <link rel="icon" type="image/png" href="{% static 'game/images/dice-2.png' %}">
+        <link rel="stylesheet" href="{% static 'game/css/rules.css' %}">
+        <script src="{% static 'game/js/rules.js'%}"></script>
+    </head>
+    <body id="rules-body">
+        <div id="rules-charter">
+            <div id="rules-blackjack" style="display: block">
+                <h1>Rules</h1>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+            </div>
+<!--<input type="submit" value="OK" onclick="rulesRedirect()">-->
+        </div>
+        <br><br>
+        <div class="progress">
+            <div class="progress__fill"></div>
+            <span class="progress__text">0%</span>
+        </div>
+    </body>
+</html>

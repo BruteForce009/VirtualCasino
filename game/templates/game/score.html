@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BlackJack</title>
+        <link rel="icon" type="image/png" href="{% static 'game/images/dice-2.png' %}">
+        <link rel="stylesheet" href="{% static 'game/css/home.css' %}">
+        <script src="{% static 'game/js/score.js'%}" type="module"></script>
+    </head>
+    <body id="score-body">
+        <div class="score-sheet">
+            <table align="center" cellpadding="0px 100px" cellspacing="30px" id="leader-table">
+                {% for user in users %}
+                <tr>
+                    <td class="user-table">1</td>
+                    <td class="score-table">2</td>
+                    <td class="date-table">3</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
